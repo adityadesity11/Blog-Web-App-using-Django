@@ -15,7 +15,6 @@ def add_review(req):
     if(req.method == 'POST'):
         title = req.POST['title']
         body = req.POST['body']
-        # created_at = datetime.now
 
         post = Posts(title=title,body=body)
         post.save() # save into db
