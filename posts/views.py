@@ -11,18 +11,6 @@ def post(req,pk):
     posts = Posts.objects.get(id=pk)
     return render(req,'posts.html',{'posts':posts})
 
-def add_review(req):
-    if(req.method == 'POST'):
-        title = req.POST['title']
-        body = req.POST['body']
-        # created_at = datetime.now
-
-        post = Posts(title=title,body=body)
-        post.save() # save into db
-        return render(req,'index.html')
-        
-    return render(req,'write.html')
-    # return render(req,'index.html')
 
 def blogpost(req):
     if(req.method == 'POST'):
