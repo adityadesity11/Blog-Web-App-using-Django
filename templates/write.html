@@ -1,6 +1,103 @@
-<form  method='POST'>
-     {% csrf_token %}
-    <input type="text" name = "title" placeholder="title"><br>
-    <textarea name="body" id="" cols="30" rows="10" placeholder="write something"></textarea><br>
-    <input type="submit" value="Post"> 
-</form>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        .header {
+            padding: 2px;
+            font-size: 40px;
+            text-align: center;
+            background: white;
+        }
+
+        .home {
+            padding: 4px;
+            background-color: #e1dada;
+            margin-left: 96%;
+        }
+
+        .home a {
+            text-decoration: none;
+        }
+
+        .home a:hover {
+            color: red;
+            cursor: pointer;
+
+        }
+
+        .outer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            padding: 12px;
+            margin: 10px;
+            /* background-color: rgb(206, 241, 241); */
+
+        }
+
+        #submit {
+            padding: 9px;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: blueviolet;
+            font-weight: bold;
+            border-radius: 7px;
+            width: 120px;
+
+        }
+
+        #submit:hover {
+            cursor: pointer;
+            /* color: rgb(8, 173, 44); */
+            background-color: rgb(225, 221, 221);
+
+        }
+
+        .values {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2>Bloggers.com</h2>
+    </div>
+    <div class="home">
+        <a href="/">Home</a>
+    </div>
+    <div class="outer">
+
+        <div class="container">
+
+            <form method='POST' class="inp-form">
+                {% csrf_token %}
+                <input type="text" name="title" placeholder="Enter the title" class="values"><br>
+                <textarea name="body" id="" cols="100" rows="20" placeholder="Write something"
+                    class="content values"></textarea><br>
+                <center><input type="submit" value="Post" id="submit"> </center>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

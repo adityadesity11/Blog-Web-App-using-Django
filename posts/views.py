@@ -21,7 +21,8 @@ def add_review(req):
         return render(req,'index.html')
         
     return render(req,'write.html')
-    # return render(req,'index.html')
+    
+
 
 def blogpost(req):
     if(req.method == 'POST'):
@@ -34,4 +35,4 @@ def blogpost(req):
         return redirect('/')
     return render(req,'write.html')
           
-        
+
