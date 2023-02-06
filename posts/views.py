@@ -23,7 +23,12 @@ def add_review(req):
         return render(req,'index.html')
         
     return render(req,'write.html')
+<<<<<<< HEAD
     # return render(req,'index.html')
+>>>>>>> sub_branch
+=======
+    
+
 >>>>>>> sub_branch
 
 def blogpost(req):
@@ -37,4 +42,4 @@ def blogpost(req):
         return redirect('/')
     return render(req,'write.html')
           
-        
+
